@@ -59,15 +59,15 @@ int _printf(const char *format, ...)
  */
 int op_ch(va_list arg, char *final, int lformat)
 {
-	int i;
-	char *s = va_arg(arg, char *);
+	char s = va_arg(arg, int);
 
-	for (i = 0; s[i] != 0; i++)
+	if (s)
 	{
-		final[lformat] = s[i];
-		lformat++;
+		final[lformat] = s;
+		return (1);
 	}
-	return (i);
+	else
+		return (0);
 }
 
 /**

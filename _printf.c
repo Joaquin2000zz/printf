@@ -33,7 +33,10 @@ int _printf(const char *format, ...)
 			for (op_pos = 0; ops[op_pos].op; op_pos++)
 			{
 				if (ops[op_pos].op == format[end_pos + 1])
+				{
+					end_pos++;
 					lformat += ops[op_pos].f(arg, final, lformat);
+				}
 			}
 		}
 		else

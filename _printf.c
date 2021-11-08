@@ -24,15 +24,15 @@ int _printf(const char *format, ...)
 	{
 		if (format[end_pos] == '%')
 		{
-			end_pos++;
-			if (format[end_pos] == '%')
+			if (format[end_pos + 1] == '%')
 			{
 				final[lformat] = format[end_pos];
+				end_pos++;
 				lformat++;
 			}
 			for (op_pos = 0; ops[op_pos].op; op_pos++)
 			{
-				if (ops[op_pos].op == format[end_pos])
+				if (ops[op_pos].op == format[end_pos + 1])
 					lformat += ops[op_pos].f(arg, final, lformat);
 			}
 		}
@@ -46,6 +46,8 @@ int _printf(const char *format, ...)
 	va_end(arg);
 	for (j = 0; final[j] != 0; j++)
 		_putchar(final[j]);
+	for (j = 0; final[j] != 0; j++)
+		final[j] = '\0';
 	return (j);
 }
 
@@ -84,9 +86,7 @@ int op_str(va_list arg, char *final, int lformat)
 	if (s)
 	{
 		for (i = 0; s[i] != 0; i++)
-		{
-		final[lformat + i] = s[i];
-		}
+			final[lformat + i] = s[i];
 		return (i);
 	}
 	else

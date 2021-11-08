@@ -82,9 +82,14 @@ int op_str(va_list arg, char *final, int lformat)
 	int i;
 	char *s = va_arg(arg, char *);
 
-	for (i = 0; s[i] != 0; i++)
+	if (s)
 	{
+		for (i = 0; s[i] != 0; i++)
+		{
 		final[lformat + i] = s[i];
+		}
+		return (i);
 	}
-	return (i);
+	else
+		return (0);
 }

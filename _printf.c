@@ -29,7 +29,6 @@ int _printf(const char *format, ...)
 			{
 				final[lformat] = format[end_pos];
 				lformat++;
-				continue;
 			}
 			for (op_pos = 0; ops[op_pos].op; op_pos++)
 			{
@@ -67,7 +66,7 @@ int op_ch(va_list arg, char *final, int lformat)
 		return (1);
 	}
 	else
-		return (0);
+		return (-1);
 }
 
 /**
@@ -91,5 +90,5 @@ int op_str(va_list arg, char *final, int lformat)
 		return (i);
 	}
 	else
-		return (0);
+		return (-1);
 }

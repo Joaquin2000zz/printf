@@ -17,6 +17,8 @@ int _printf(const char *format, ...)
 		{'s', op_str},
 		{'\0', '\0'}
 		};
+	if (!format)
+		return (-1);
 	va_start(arg, format);
 	for (end_pos = 0; format[end_pos]; end_pos++)
 	{
@@ -32,9 +34,7 @@ int _printf(const char *format, ...)
 			for (op_pos = 0; ops[op_pos].op; op_pos++)
 			{
 				if (ops[op_pos].op == format[end_pos])
-				{
 					lformat += ops[op_pos].f(arg, final, lformat);
-				}
 			}
 		}
 		else

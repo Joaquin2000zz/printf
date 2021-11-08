@@ -46,7 +46,7 @@ int _printf(const char *format, ...)
 	va_end(arg);
 	for (j = 0; final[j] != 0; j++)
 		_putchar(final[j]);
-	return (lformat);
+	return (j);
 }
 
 /**

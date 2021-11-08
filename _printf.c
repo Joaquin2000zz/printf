@@ -10,7 +10,7 @@
 int _printf(const char *format, ...)
 {
 	va_list arg;
-	int end_pos, op_pos, larg, lformat = 0, j;
+	int end_pos, op_pos, lformat = 0, j;
 	char final[1024];
 	printfar ops[] = {
 		{'c', op_ch},
@@ -46,7 +46,7 @@ int _printf(const char *format, ...)
 	}
 	va_end(arg);
 	for (j = 0; final[j] != 0; j++)
-		putchar(final[j]);
+		_putchar(final[j]);
 	return (lformat);
 }
 

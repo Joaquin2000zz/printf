@@ -4,7 +4,7 @@
 int op_ch(va_list arg, char *, int);
 int op_str(va_list arg, char *, int);
 int _printf(const char *format, ...);
-
+int _putchar(char c);
 
 /**
  * struct objprintf - Struct that manage the parameter kinds

@@ -34,10 +34,10 @@ int op_str(va_list arg)
 	{
 		for (i = 0; s[i] != 0; i++)
 			_putchar(s[i]);
-		return (i);
+		return (i - 1);
 	}
 	else
 	{
-		return (-1);
+		return (_printf("(null)"));
 	}
 }

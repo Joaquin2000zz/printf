@@ -1,5 +1,6 @@
 #include <stdarg.h>
 #include "main.h"
+
 /**
  * _printf - get a parameter to print
  *
@@ -9,7 +10,7 @@
 int _printf(const char *format, ...)
 {
 	va_list arg;
-	int end_pos, op_pos, lformat = 0, j;
+	int end_pos, op_pos, length = 0;
 
 	if (!format)
 		return (-1);
@@ -17,36 +18,39 @@ int _printf(const char *format, ...)
 	for (end_pos = 0; format[end_pos]; end_pos++)
 	{
 		if (format[end_pos + 1] == '\0' && format[end_pos] == '%')
-		{
-			_putchar(format[end_pos]);
 			return (-1);
-		}
 		if (format[end_pos] == '%')
 		{
-			end_pos++;
-			if (format[end_pos] == '%')
+			if (format[end_pos + 1] == '%')
 			{
+				length++;
 				_putchar(format[end_pos]);
-				end_pos++;
-				lformat++;
+				end_pos;
+				continue;
 			}
 			for (op_pos = 0; fstruct(op_pos).op; op_pos++)
 			{
-				if (fstruct(op_pos).op == format[end_pos])
+				if (fstruct(op_pos).op == format[1 + end_pos])
 				{
 					end_pos++;
-					end_pos += fstruct(op_pos).f(arg);
+					length += fstruct(op_pos).f(arg);
+					break;
 				}
+			}
+			if (fstruct(op_pos).op == '\0')
+			{	
+				_putchar(format[end_pos]);
+				length++;
 			}
 		}
 		else
 		{
 			_putchar(format[end_pos]);
-			lformat++;
+			length++;
 		}
 	}
 	va_end(arg);
-	return (end_pos);
+	return (length);
 }
 
 /**

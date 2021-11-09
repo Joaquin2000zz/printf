@@ -35,6 +35,11 @@ int output(int a, int b)
 int main(void)
 {
 	int a, b, cont = 0;
+	int bin = 8;
+
+	_printf("%b\n",bin);
+	printf("%b\n",bin);
+	/*
 	BLUE;
 	printf("\nTEST WITHOUT ARGUMENTS:\n\n");
 	RESET;
@@ -298,7 +303,7 @@ int main(void)
 		RED;
 		printf ("\n\n30 CASES CHECKED, %d ERRORS.\n\n", cont);
 		RESET;
-	}
+	}*/
 	return (cont);
 }
 

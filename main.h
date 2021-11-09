@@ -4,6 +4,7 @@
 int op_ch(va_list arg);
 int op_str(va_list arg);
 int op_bin(va_list arg);
+int op_rev(va_list arg);
 int _printf(const char *format, ...);
 int _putchar(char c);
 char *freear(char *final);

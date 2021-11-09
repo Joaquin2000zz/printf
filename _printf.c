@@ -54,6 +54,8 @@ printfar fstruct(int a)
 	printfar ops[] = {
 		{'c', op_ch},
 		{'s', op_str},
+		{'d', op_int},
+		{'i', op_int},
 		{'\0', '\0'}
 	};
 	return (ops[a]);

@@ -23,11 +23,11 @@ int _printf(const char *format, ...)
 				return (-1);
 			if (format[end_pos + 1] == '%')
 			{
-				length++, _putchar('%'), end_pos++;
+				_putchar('%'), end_pos++, length++;
 				continue;
 			}
 			for (op_pos = 0; fstruct(op_pos).op; op_pos++)
-				if (fstruct(op_pos).op[0] == format[1 + end_pos])
+				if (fstruct(op_pos).op[0] == format[end_pos + 1])
 				{
 					length += fstruct(op_pos).f(arg), end_pos++;
 					break;

@@ -62,11 +62,11 @@ printfar fstruct(int a)
 		{'s', op_str},
 		{'\0', '\0'}
 	};
-	return(ops[a]);
+	return (ops[a]);
 }
 
 /**
-  * op_ch - return a character
+  * freear - free the array
   * @final: string to print
   * Return: the string clean
   */

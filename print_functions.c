@@ -39,6 +39,7 @@ int op_str(va_list arg)
  * aux_dec - return a int converted in string
  * @n: int to convert
  *
+ * Return: Returns length of int
  */
 
 int aux_dec(int n)
@@ -69,5 +70,5 @@ int op_int(va_list arg)
 {
 	int i = va_arg(arg, int);
 
-	return(aux_dec(i));
+	return (aux_dec(i));
 }

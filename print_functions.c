@@ -3,8 +3,6 @@
 /**
  * op_ch - return a char
  * @arg: list of arguments to print
- * @final: char to print
- * @lformat: long of the char to print
  * Return: string length
  */
 
@@ -24,8 +22,6 @@ int op_ch(va_list arg)
 /**
  * op_str - return a string
  * @arg: list of arguments to print
- * @final: string to print
- * @lformat: long of the string to print
  * Return: string length
  */
 

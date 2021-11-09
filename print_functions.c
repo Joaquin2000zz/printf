@@ -1,10 +1,13 @@
+#include "main.h"
+
 /**
-  * op_ch - return a char
+ * op_ch - return a char
  * @arg: list of arguments to print
  * @final: char to print
  * @lformat: long of the char to print
  * Return: string length
  */
+
 int op_ch(va_list arg, char *final, int lformat)
 {
 	char s = va_arg(arg, int);
@@ -17,6 +20,7 @@ int op_ch(va_list arg, char *final, int lformat)
 	else
 	return (-1);
 }
+
 /**
  * op_str - return a string
  * @arg: list of arguments to print
@@ -24,6 +28,7 @@ int op_ch(va_list arg, char *final, int lformat)
  * @lformat: long of the string to print
  * Return: string length
  */
+
 int op_str(va_list arg, char *final, int lformat)
 {
 	int i;

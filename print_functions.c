@@ -40,8 +40,6 @@ int op_str(va_list arg, char *final, int lformat)
 			final[lformat + i] = s[i];
 		return (i);
 	}
-	if (!s)
-	{
-		return (_printf("(null)"));
-	}
+	else
+		return (-1);
 }

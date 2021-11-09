@@ -19,7 +19,8 @@ typedef struct objprintf
 	int (*f)(va_list arg);
 
 } printfar;
-
+int aux_dec(int n);
 printfar fstruct(int a);
+int op_int(va_list arg);
 
 #endif

@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 				continue;
 			}
 			for (op_pos = 0; fstruct(op_pos).op; op_pos++)
-				if (fstruct(op_pos).op[0] == format[end_pos + 1])
+				if (fstruct(op_pos).op == format[end_pos + 1])
 				{
 					length += fstruct(op_pos).f(arg), end_pos++;
 					break;

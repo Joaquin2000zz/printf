@@ -9,7 +9,7 @@
 int op_ch(va_list arg)
 {
 	char s = va_arg(arg, int);
-	int i = 0
+	int i = 0;
 
 	_putchar(s);
 	i++;

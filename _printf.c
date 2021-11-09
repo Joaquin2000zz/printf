@@ -33,16 +33,11 @@ int _printf(const char *format, ...)
 					break;
 				}
 			if (!fstruct(op_pos).op)
-			{
-				_putchar(format[end_pos]);
-				length++;
-			}
+				_putchar(format[end_pos]);, length++;
+	
 		}
 		else
-		{
-			_putchar(format[end_pos]);
-			length++;
-		}
+			_putchar(format[end_pos]);, length++;
 	}
 	va_end(arg);
 	return (length);

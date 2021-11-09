@@ -9,12 +9,10 @@
 int op_ch(va_list arg)
 {
 	char s = va_arg(arg, int);
-
-	if (s)
-	{
+	int i = 0
 	_putchar(s);
-		return (1);
-	}
+	i++;
+	return (i);
 }
 
 /**
@@ -28,15 +26,10 @@ int op_str(va_list arg)
 	int i = 0;
 	char *s = va_arg(arg, char *);
 
-	if (s)
-	{
+	if (!s)
+		i = (_printf("(null)"));
+	else
 		for (i = 0; s[i] != 0; i++)
 			_putchar(s[i]);
-		return (i);
-	}
-	else
-	{
-		i = (_printf("(null)"));
-		return (i);
-	}
+	return (i);
 }

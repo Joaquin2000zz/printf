@@ -15,8 +15,6 @@ int op_ch(va_list arg)
 	_putchar(s);
 		return (1);
 	}
-	else
-	return (-1);
 }
 
 /**
@@ -27,7 +25,7 @@ int op_ch(va_list arg)
 
 int op_str(va_list arg)
 {
-	int i;
+	int i = 0;
 	char *s = va_arg(arg, char *);
 
 	if (s)
@@ -38,6 +36,7 @@ int op_str(va_list arg)
 	}
 	else
 	{
-		return (_printf("(null)"));
+		i = (_printf("(null)"));
+		return (i);
 	}
 }

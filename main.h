@@ -9,9 +9,9 @@ char *freear(char *final);
 
 
 /**
- * struct objprintf - Struct that manage the parameter kinds
- * @op: kind of parameter
- * @f: The function associated
+ * struct objprintf - A struct that has two types; a char type and a function type 
+ * @op: char type
+ * @f: a function that accepts va_list arg and returns a pointer to a function.
  */
 typedef struct objprintf
 {

@@ -84,7 +84,7 @@ int op_bin(va_list arg)
 	char arr[1024];
 	unsigned int n = va_arg(arg, int);
 
-	while (n != 0 || n != 1)
+	while (n != 0)
 	{
 	arr[i] = (n % 2) + 48;
 	n = n / 2;

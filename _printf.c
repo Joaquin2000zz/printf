@@ -12,11 +12,7 @@ int _printf(const char *format, ...)
 	va_list arg;
 	int end_pos, op_pos, lformat = 0, j;
 	char final[1024];
-	printfar ops[] = {
-		{'c', op_ch},
-		{'s', op_str},
-		{'\0', '\0'}
-		};
+
 	if (!format)
 		return (-1);
 	va_start(arg, format);
@@ -30,12 +26,12 @@ int _printf(const char *format, ...)
 				end_pos++;
 				lformat++;
 			}
-			for (op_pos = 0; ops[op_pos].op; op_pos++)
+			for (op_pos = 0; fstruct(op_pos).op; op_pos++)
 			{
-				if (ops[op_pos].op == format[end_pos + 1])
+				if (fstruct(op_pos).op == format[end_pos + 1])
 				{
 					end_pos++;
-					lformat += ops[op_pos].f(arg, final, lformat);
+					lformat += fstruct(op_pos).f(arg, final, lformat);
 				}
 			}
 		}
@@ -49,10 +45,40 @@ int _printf(const char *format, ...)
 	va_end(arg);
 	for (j = 0; final[j] != 0; j++)
 		_putchar(final[j]);
-	for (j = 0; final[j] != 0; j++)
-		final[j] = '\0';
+	freear(final);
 	return (j);
 }
+
+/**
+  * fstruct - define the array list of the parameters
+  * @a: position of the parameter needed
+  * Return: the operation that you need
+  */
+
+printfar fstruct(int a)
+{
+	printfar ops[] = {
+		{'c', op_ch},
+		{'s', op_str},
+		{'\0', '\0'}
+	};
+	return(ops[a]);
+}
+
+/**
+  * op_ch - return a character
+  * @final: string to print
+  * Return: the string clean
+  */
+char *freear(char *final)
+{
+	int j;
+
+	for (j = 0; final[j] != 0; j++)
+		final[j] = '\0';
+	return (final);
+}
+
 
 /**
  * op_ch - return a character

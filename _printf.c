@@ -52,10 +52,10 @@ int _printf(const char *format, ...)
 }
 
 /**
-  * fstruct - define the array list of the parameters
-  * @a: position of the parameter needed
-  * Return: the operation that you need
-  */
+ * fstruct - define the array list of the parameters
+ * @a: position of the parameter needed
+ * Return: the operation that you need
+ */
 
 printfar fstruct(int a)
 {

@@ -10,7 +10,6 @@ char *freear(char *final);
 
 /**
  * struct objprintf - Struct that manage the parameter kinds
- *
  * @op: kind of parameter
  * @f: The function associated
  */
@@ -20,6 +19,7 @@ typedef struct objprintf
 	int (*f)(va_list arg);
 
 } printfar;
+
 printfar fstruct(int a);
 
 #endif

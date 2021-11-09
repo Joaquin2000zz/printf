@@ -72,3 +72,28 @@ int op_int(va_list arg)
 
 	return (aux_dec(i));
 }
+/**
+  * op_bin - return ---
+  * @arg: arg to convert into binary
+  * Return: return length
+  */
+int op_bin(va_list arg)
+{
+	unsigned int i = 0;
+	int j;
+	char arr[1024];
+	unsigned int n = va_arg(arg, int);
+
+	while (n != 0 || n != 1)
+	{
+	arr[i] = (n % 2) + 48;
+	n = n / 2;
+	i++;
+	}
+
+	for (j = (i - 1); j >= 0; j--)
+	{
+	_putchar(arr[j]);
+	}
+	return (i);
+}

@@ -10,44 +10,43 @@ int _printf(const char *format, ...)
 {
 	va_list arg;
 	int end_pos, op_pos, lformat = 0, j;
-	char final[1024];
 
 	if (!format)
 		return (-1);
 	va_start(arg, format);
 	for (end_pos = 0; format[end_pos]; end_pos++)
 	{
+		if (format[end_pos + 1] == '\0' && format[end_pos] == '%')
+		{
+			_putchar(format[end_pos]);
+			return (-1);
+		}
 		if (format[end_pos] == '%')
 		{
-			if (format[end_pos + 1] == '\0')
-				return (-1);
-			if (format[end_pos + 1] == '%')
+			end_pos++;
+			if (format[end_pos] == '%')
 			{
-				final[lformat] = format[end_pos];
+				_putchar(format[end_pos]);
 				end_pos++;
 				lformat++;
 			}
 			for (op_pos = 0; fstruct(op_pos).op; op_pos++)
 			{
-				if (fstruct(op_pos).op == format[end_pos + 1])
+				if (fstruct(op_pos).op == format[end_pos])
 				{
 					end_pos++;
-					lformat += fstruct(op_pos).f(arg, final, lformat);
+					end_pos += fstruct(op_pos).f(arg);
 				}
 			}
 		}
 		else
 		{
-			final[lformat] = format[end_pos];
+			_putchar(format[end_pos]);
 			lformat++;
 		}
-		final[lformat + 1] = '\0';
 	}
 	va_end(arg);
-	for (j = 0; final[j] != 0; j++)
-		_putchar(final[j]);
-	freear(final);
-	return (j);
+	return (end_pos);
 }
 
 /**
@@ -64,18 +63,4 @@ printfar fstruct(int a)
 		{'\0', '\0'}
 	};
 	return (ops[a]);
-}
-
-/**
-  * freear - free the array
-  * @final: string to print
-  * Return: the string clean
-  */
-char *freear(char *final)
-{
-	int j;
-
-	for (j = 0; final[j] != 0; j++)
-		final[j] = '\0';
-	return (final);
 }

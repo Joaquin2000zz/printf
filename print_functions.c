@@ -8,13 +8,13 @@
  * Return: string length
  */
 
-int op_ch(va_list arg, char *final, int lformat)
+int op_ch(va_list arg)
 {
 	char s = va_arg(arg, int);
 
 	if (s)
 	{
-	final[lformat] = s;
+	_putchar(s);
 		return (1);
 	}
 	else
@@ -29,7 +29,7 @@ int op_ch(va_list arg, char *final, int lformat)
  * Return: string length
  */
 
-int op_str(va_list arg, char *final, int lformat)
+int op_str(va_list arg)
 {
 	int i;
 	char *s = va_arg(arg, char *);
@@ -37,9 +37,11 @@ int op_str(va_list arg, char *final, int lformat)
 	if (s)
 	{
 		for (i = 0; s[i] != 0; i++)
-			final[lformat + i] = s[i];
+			_putchar(s[i]);
 		return (i);
 	}
 	else
+	{
 		return (-1);
+	}
 }

@@ -83,11 +83,10 @@ int op_bin(va_list arg)
 	unsigned int j;
 	char arr[1024];
 	unsigned int n = va_arg(arg, int);
-	
+
 	if (va_arg(arg, int) < 0)
 		return (0);
-	else
-	{
+
 		while (n != 0)
 		{
 			arr[i] = (n % 2) + 48;
@@ -100,5 +99,4 @@ int op_bin(va_list arg)
 			_putchar(arr[j]);
 		}
 		return (i);
-	}
 }

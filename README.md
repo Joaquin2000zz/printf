@@ -29,3 +29,11 @@ Print integers: _printf("This is an array element: arr[%d]:%c", 32, arr[32]);`
 
 Output: This is an array element arr[32]:A
 Many other specifiers and flags were added and by combinig those the _printf() function generate a different ouput. The following list are the specifiers and flags allowed.
+
+Files contained in this repository
+Name			Information											Relevant Files
+man_3_printf		Man page of the _printf() function.								None
+main.h			Header file with the data type struct, standard libraries and custom prototypes.		*.c compilation
+_printf.c		Main printf function file. Calls other functions.						printf_(name of var).c file
+print_functions.c	Includes op_chr, op_str, op_dec.. functions
+_putchar.c		Custom putchar function.									None

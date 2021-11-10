@@ -7,7 +7,6 @@ int op_bin(va_list arg);
 int _printf(const char *format, ...);
 int _putchar(char c);
 char *freear(char *final);
-
 /**
  * struct objprintf - A struct that has two types;
  * a char type and a function type
@@ -23,5 +22,4 @@ typedef struct objprintf
 int aux_dec(int n);
 printfar fstruct(int a);
 int op_int(va_list arg);
-
 #endif

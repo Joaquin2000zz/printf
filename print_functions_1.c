@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
-  * op_rev - reverse a string
-  * @arg: string to reverse
-  * Return: string length
-  */
+ * op_rev - reverse a string
+ * @arg: string to reverse
+ * Return: string length
+ */
 int op_rev(va_list arg)
 {
 	char *str = va_arg(arg, char *);

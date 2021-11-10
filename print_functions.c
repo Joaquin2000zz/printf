@@ -36,9 +36,8 @@ int op_str(va_list arg)
 }
 
 /**
- * aux_dec - return a int converted in string
+ * aux_dec - write int to stout
  * @n: int to convert
- *
  * Return: Returns length of int
  */
 

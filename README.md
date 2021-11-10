@@ -37,3 +37,7 @@ main.h			Header file with the data type struct, standard libraries and custom pr
 _printf.c		Main printf function file. Calls other functions.						printf_(name of var).c file
 print_functions.c	Includes op_chr, op_str, op_dec.. functions
 _putchar.c		Custom putchar function.									None
+
+Authors ©
+Joaquin Victoria,
+Sahin Meric

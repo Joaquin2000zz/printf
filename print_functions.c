@@ -61,7 +61,7 @@ int aux_dec(int n)
 	return (largo);
 }
 /**
-  * op_int - write interger to stdout
+  * op_int - write integer to stdout
   * @arg: arg to print
   * Return: Returns length of the integer
   */
@@ -72,9 +72,9 @@ int op_int(va_list arg)
 	return (aux_dec(i));
 }
 /**
-  * op_bin - return ---
+  * op_bin - writes binary
   * @arg: arg to convert into binary
-  * Return: return length
+  * Return: return length of binary
   */
 int op_bin(va_list arg)
 {

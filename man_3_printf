@@ -31,6 +31,9 @@ The const char * argument is expected to be a pointer to an array of character t
 .TP
 .B %
 A '%' is written but no argument is converted. The complete version specification is '%%'
+.TP
+.B d, i
+The int argument is converted to signed decimal notation.
 .SH EXAMPLE
 To print the day of the year, where weekday and month are pointers to strings and day and year are integers:
 

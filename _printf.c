@@ -43,9 +43,9 @@ int _printf(const char *format, ...)
 }
 
 /**
- * fstruct - define the array list of the parameters
+ * fstruct - define an array list of type printfar
  * @a: position of the parameter needed
- * Return: the operation that you need
+ * Return: Corresponding ops
  */
 
 printfar fstruct(int a)

@@ -17,7 +17,7 @@ int op_ch(va_list arg)
 }
 
 /**
- * op_str - return a string
+ * op_str - write a string
  * @arg: list of arguments to print
  * Return: string length
  */

@@ -36,7 +36,7 @@ int op_str(va_list arg)
 }
 
 /**
- * aux_dec - write int to stout
+ * aux_dec - write decimal to stout
  * @n: int to convert
  * Return: Returns length of int
  */
@@ -61,9 +61,9 @@ int aux_dec(int n)
 	return (largo);
 }
 /**
-  * op_int - return a interger to convert with aux_dec to char
+  * op_int - write interger to stdout
   * @arg: arg to print
-  * Return: a interger
+  * Return: Returns length of the integer
   */
 int op_int(va_list arg)
 {

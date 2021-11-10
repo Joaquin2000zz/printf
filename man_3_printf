@@ -43,6 +43,6 @@ _printf("%s, %s %d, %d\\n", weekday, month, day, year);
 .SH SEE ALSO
 .I printf(3)
 .SH BUGS
-For bugs contact with https://github.com/Joaquin2000zz or https://github.com/sahinmeric
+For bugs contact with https://github.com/Joaquin2000zz || https://github.com/sahinmeric
 .SH AUTHOR
 Joaquin Victoria, Sahin Meric

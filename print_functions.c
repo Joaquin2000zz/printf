@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * op_ch - return a char
+ * op_ch - write a char
  * @arg: list of arguments to print
- * Return: string length
+ * Return: char length
  */
 
 int op_ch(va_list arg)

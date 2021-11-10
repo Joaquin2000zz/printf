@@ -2,23 +2,24 @@
 
 /**
   * op_rev - reverse a string
-  * @va_list string to reverse
+  * @arg: list string to reverse
   * Return: string length
   */
 int op_rev(va_list arg)
 {
 	char *str = va_arg(arg, char *);
-	int i = 0, j;
+	int i = 0, j = 0;
+
 	if (!str)
 		return (-1);
-	
+
 		while (str[i])
 			i++;
 		j = i;
-		while (i >= 0)
+		while (j >= 0)
 		{
-			_putchar(str[i]);
-			i--;
+			_putchar(str[j]);
+			j--;
 		}
-		return (j);
+		return (i);
 }

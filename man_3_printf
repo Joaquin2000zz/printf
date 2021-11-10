@@ -1,4 +1,4 @@
-.TH man 3 "11 October 2021" "v1.0" "_printf man page"
+.TH man 3 "12 October 2021" "v1.0" "_printf man page"
 .SH NAME
 .B _printf
 - Formatted output conversion.
@@ -10,8 +10,8 @@
 .B , ...)
 .SH DESCRIPTION
 .B _printf()
-Prints to standard output under the control of a 
-.I format
+Prints to standard output 
+.I formatted
 string that specifies how subsequent arguments are converted for output. 
 .SH Return value
 On successful return, these functions return the number of characters printed, excluding the null byte used to end output to strings.

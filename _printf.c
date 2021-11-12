@@ -57,6 +57,7 @@ printfar fstruct(int a)
 		{'i', op_int},
 		{'b', op_bin},
 		{'r', op_rev},
+		{'S', op_STR},
 		{'\0', '\0'}
 	};
 	return (ops[a]);

@@ -39,3 +39,31 @@ int op_rev(va_list arg)
 		;
 	return (len);
 }
+
+/**
+ * op_STR - Handle the following custom conversion specifier
+ *@arg: the argument
+ *Return: the string custom conversion specifier
+ */
+
+int op_STR(va_list arg)
+{
+	int i = 0, j = 0;
+	char *s = va_arg(arg, char *);
+
+	if (!s)
+		i = (_printf("(null)"));
+	else
+		for (i = 0; s[i] != 0; i++)
+		{	if (s[i] < 32 || s[i] >= 127 || s[i] < 0)
+			{
+				_putchar(92);
+				_putchar('x');
+				_printf("0A");
+				j = j + 4;
+			}
+			else
+				_putchar(s[i]);
+		}
+	return (i + j);      
+}

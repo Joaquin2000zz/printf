@@ -23,5 +23,6 @@ int aux_dec(int n);
 printfar fstruct(int a);
 int op_int(va_list arg);
 int op_rev(va_list arg);
+int op_STR(va_list arg);
 
 #endif

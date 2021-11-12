@@ -34,7 +34,7 @@ int op_rev(va_list arg)
 	char *str = va_arg(arg, char *);
 
 	if (!str)
-		return (_printf("(llun)"));
+		return (_printf("%r","(null)"));
 	aux_rev(str);
 	for (len = 0; str[len]; len++)
 		;

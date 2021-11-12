@@ -1,7 +1,7 @@
 #include "main.h"
-
+#include <stddef.h>
 int main()
 {
-	_printf("%rhola","\nNULL");
+	_printf("%r\n", NULL);
 	return (0);
 }

@@ -15,10 +15,9 @@ int aux_rev(char *str)
 	{
 		return (0);
 	}
-
 	aux_rev(str + 1);
-	i++;
 	_putchar(str[i]);
+	i++;
 	return (0);
 }
 

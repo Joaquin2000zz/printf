@@ -1,4 +1,4 @@
-.TH man 3 "11 October 2021" "v1.0" "_printf man page"
+.TH man 3 "12 October 2021" "v1.0" "_printf man page"
 .SH NAME
 .B _printf
 - Formatted output conversion.
@@ -10,8 +10,8 @@
 .B , ...)
 .SH DESCRIPTION
 .B _printf()
-Prints to standard output under the control of a 
-.I format
+Prints to standard output 
+.I formatted
 string that specifies how subsequent arguments are converted for output. 
 .SH Return value
 On successful return, these functions return the number of characters printed, excluding the null byte used to end output to strings.
@@ -31,6 +31,9 @@ The const char * argument is expected to be a pointer to an array of character t
 .TP
 .B %
 A '%' is written but no argument is converted. The complete version specification is '%%'
+.TP
+.B d, i
+The int argument is converted to signed decimal notation.
 .SH EXAMPLE
 To print the day of the year, where weekday and month are pointers to strings and day and year are integers:
 
@@ -40,6 +43,6 @@ _printf("%s, %s %d, %d\\n", weekday, month, day, year);
 .SH SEE ALSO
 .I printf(3)
 .SH BUGS
-For bugs contact with https://github.com/Joaquin2000zz or https://github.com/sahinmeric
+For bugs contact with https://github.com/Joaquin2000zz || https://github.com/sahinmeric
 .SH AUTHOR
 Joaquin Victoria, Sahin Meric

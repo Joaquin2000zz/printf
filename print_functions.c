@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * op_ch - return a char
+ * op_ch - write a char
  * @arg: list of arguments to print
- * Return: string length
+ * Return: char length
  */
 
 int op_ch(va_list arg)
@@ -17,7 +17,7 @@ int op_ch(va_list arg)
 }
 
 /**
- * op_str - return a string
+ * op_str - write a string
  * @arg: list of arguments to print
  * Return: string length
  */
@@ -36,9 +36,8 @@ int op_str(va_list arg)
 }
 
 /**
- * aux_dec - return a int converted in string
+ * aux_dec - write decimal to stout
  * @n: int to convert
- *
  * Return: Returns length of int
  */
 
@@ -62,9 +61,9 @@ int aux_dec(int n)
 	return (largo);
 }
 /**
-  * op_int - return a interger to convert with aux_dec to char
+  * op_int - write integer to stdout
   * @arg: arg to print
-  * Return: a interger
+  * Return: Returns length of the integer
   */
 int op_int(va_list arg)
 {
@@ -73,9 +72,9 @@ int op_int(va_list arg)
 	return (aux_dec(i));
 }
 /**
-  * op_bin - return ---
+  * op_bin - writes binary
   * @arg: arg to convert into binary
-  * Return: return length
+  * Return: return length of binary
   */
 int op_bin(va_list arg)
 {

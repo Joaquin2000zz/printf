@@ -2,10 +2,9 @@
 #include "main.h"
 
 /**
- * _printf - get a parameter to print
- *
+ * _printf - prints the given formatted string
  * @format: format to print
- * Return: the operator needed
+ * Return: the length of string that will be printed
  */
 int _printf(const char *format, ...)
 {
@@ -44,9 +43,9 @@ int _printf(const char *format, ...)
 }
 
 /**
- * fstruct - define the array list of the parameters
+ * fstruct - define an array list of type printfar
  * @a: position of the parameter needed
- * Return: the operation that you need
+ * Return: Corresponding ops
  */
 
 printfar fstruct(int a)

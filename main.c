@@ -2,6 +2,6 @@
 
 int main()
 {
-	_printf("%r","\nNULL");
+	_printf("%rhola","\nNULL");
 	return (0);
 }

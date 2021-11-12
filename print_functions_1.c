@@ -12,10 +12,14 @@ int aux_rev(char *str)
 	int i = 0;
 
 	if (*str == 0)
+	{
+		return (0);
+	}
 
-		return (i);
-		aux_rev(str + 1);
-		_putchar(str[i]);
+	aux_rev(str + 1);
+	i++;
+	_putchar(str[i]);
+	return (0);
 }
 
 /**
@@ -26,12 +30,12 @@ int aux_rev(char *str)
 
 int op_rev(va_list arg)
 {
-	int i, len = 0;
+	int len = 0;
 	char *str = va_arg(arg, char *);
 
 	if (!str)
 		return (_printf("(null)"));
-		aux_rev(str);
+	aux_rev(str);
 	for (len = 0; str[len]; len++)
 		;
 	return (len - 1);

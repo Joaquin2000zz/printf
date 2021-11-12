@@ -37,5 +37,5 @@ int op_rev(va_list arg)
 	aux_rev(str);
 	for (len = 0; str[len]; len++)
 		;
-	return (len - 1);
+	return (len);
 }

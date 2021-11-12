@@ -22,9 +22,6 @@ typedef struct objprintf
 int aux_dec(int n);
 printfar fstruct(int a);
 int op_int(va_list arg);
-<<<<<<< HEAD
 int op_rev(va_list arg);
 
-=======
->>>>>>> refs/remotes/origin/main
 #endif

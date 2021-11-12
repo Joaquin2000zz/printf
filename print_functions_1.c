@@ -33,7 +33,7 @@ int op_rev(va_list arg)
 	char *str = va_arg(arg, char *);
 
 	if (!str)
-		return (_printf("%r","(null)"));
+		return (_printf("%r", "(null)"));
 	aux_rev(str);
 	for (len = 0; str[len]; len++)
 		;
@@ -55,7 +55,8 @@ int op_STR(va_list arg)
 		i = (_printf("(null)"));
 	else
 		for (i = 0; s[i] != 0; i++)
-		{	if (s[i] < 32 || s[i] >= 127 || s[i] < 0)
+		{
+			if (s[i] < 32 || s[i] >= 127 || s[i] < 0)
 			{
 				_putchar(92);
 				_putchar('x');
@@ -65,5 +66,5 @@ int op_STR(va_list arg)
 			else
 				_putchar(s[i]);
 		}
-	return (i + j);      
+	return (i + j);
 }

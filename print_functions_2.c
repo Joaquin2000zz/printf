@@ -54,27 +54,27 @@ int op_bin(va_list arg)
 }
 
 /**
-
-previous binary logic
-
-{
-    unsigned int i = 0;
-    int j;
-    char arr[1024];
-    unsigned int n = va_arg(arg, int);
-
-    while (n != 0)
-    {
-    arr[i] = (n % 2) + 48;
-    n = n / 2;
-    i++;
-    }
-
-    for (j = (i - 1); j >= 0; j--)
-    {
-    _putchar(arr[j]);
-    }
-    return (i);
-}
-**/
+ *
+ *  previous binary logic
+ *
+ *{
+ *  unsigned int i = 0;
+ *   int j;
+ *   char arr[1024];
+ *   unsigned int n = va_arg(arg, int);
+ *
+ *   while (n != 0)
+ *   {
+ *   arr[i] = (n % 2) + 48;
+ *   n = n / 2;
+ *   i++;
+ *   }
+ *
+ *   for (j = (i - 1); j >= 0; j--)
+ *   {
+ *   _putchar(arr[j]);
+ *   }
+ *   return (i);
+ *}
+ **/
 

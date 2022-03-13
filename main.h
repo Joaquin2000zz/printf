@@ -22,20 +22,6 @@ typedef struct objprintf
 
 } printfar;
 
-/**
- * struct bin_s - singly linked list
- * @str: string - malloc'ed 
- * @len: length of the string
- * @next: points to the next node
- *
- * Description: linked list with bits
- */
-typedef struct list_s
-{
-    int bit;
-    struct list_s *next;
-} list_t;
-
 void printBin(int n);
 int lenBin(int n);
 int op_bin(va_list arg);

@@ -78,3 +78,30 @@ int op_bin(va_list arg)
  *}
  **/
 
+/**
+ * print_oct - writes octal
+ * @n: the argument given for the va_list
+ * Return: the length of the octal
+ */
+void print_oct(int n)
+{
+    if (n / 8)
+        print_oct(n / 8);
+    _putchar((n % 8) + 48);    
+}
+
+/**
+ * op_oct - writes octal 
+ * @arg: the argument given for the va_list
+ * Return: the length of the octal
+ */
+int op_oct(va_list arg)
+{
+    int i = 0, n;
+
+    n = va_arg(arg, int);
+    print_oct(n);
+    for (; n / 8; i++)
+        n /= 8;
+    return (i);
+}

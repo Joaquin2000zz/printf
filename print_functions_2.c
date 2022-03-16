@@ -65,7 +65,7 @@ int op_oct(va_list arg)
 	unsigned int n;
 
 	aux = va_arg(arg, int);
-	n = n;
+	n = aux;
 	i = print_oct(n);
 	return (i);
 }

@@ -3,7 +3,7 @@
 /**
  * printBin - prints the translation of n
  * @n: the number that we need to print
- * Return: void function
+ * Return: lentgth of binary
  */
 int printBin(int n)
 {

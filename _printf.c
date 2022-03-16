@@ -59,6 +59,8 @@ printfar fstruct(int a)
 		{'r', op_rev},
 		{'S', op_STR},
         {'o', op_oct},
+        {'x', op_hexa},
+        {'X', op_hexA},
 		{'\0', '\0'}
 	};
 	return (ops[a]);

@@ -22,13 +22,14 @@ typedef struct objprintf
 
 } printfar;
 
-void printBin(int n);
-int lenBin(int n);
 int op_bin(va_list arg);
 int aux_dec(int n);
 printfar fstruct(int a);
 int op_int(va_list arg);
 int op_rev(va_list arg);
 int op_STR(va_list arg);
+int op_oct(va_list arg);
+int op_hexa(va_list arg);
+int op_hexA(va_list arg);
 
 #endif

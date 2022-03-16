@@ -5,39 +5,23 @@
  * @n: the number that we need to print
  * Return: void function
  */
-void printBin(int n)
+int printBin(int n)
 {
+    int len = 0;
 
     /*if n greater than 1*/
     if (n > 1)
     {
 
-        printBin(n / 2);
+        len += printBin(n / 2);
         _printf("%d", n % 2);
     }
     else
         _printf("%d", n);
 
+    len++;
+    return (len);
 }
-
-/**
- * lenBin - obtains the len of a binary number
- * @n: the number that we need to know the length
- * Return: the length of the number in base 2
- */
-int lenBin(int n)
-{
-
-    /*if n divisible to 2*/
-    if (n > 1)
-    {
-
-        return(lenBin(n / 2) + 1);
-    }
-
-    return (1);
-}
-
 
 /**
   * op_bin - writes binary
@@ -46,10 +30,9 @@ int lenBin(int n)
   */
 int op_bin(va_list arg)
 {
-    int n = va_arg(arg, int), i;
+    int n = va_arg(arg, int), i = 0;
 
-	printBin(n);
-    i = lenBin(n);
+	i = printBin(n);
     return (i);
 }
 
@@ -83,11 +66,14 @@ int op_bin(va_list arg)
  * @n: the argument given for the va_list
  * Return: the length of the octal
  */
-void print_oct(int n)
+int print_oct(int n)
 {
+    int i = 0;
     if (n / 8)
-        print_oct(n / 8);
-    _putchar((n % 8) + 48);    
+        i += print_oct(n / 8);
+    _putchar((n % 8) + 48);
+    i++;
+    return(i);
 }
 
 /**
@@ -97,11 +83,9 @@ void print_oct(int n)
  */
 int op_oct(va_list arg)
 {
-    int i = 0, n;
+    int i, n;
 
     n = va_arg(arg, int);
-    print_oct(n);
-    for (; n / 8; i++)
-        n /= 8;
+    i = print_oct(n);
     return (i);
 }

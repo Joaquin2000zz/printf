@@ -15,10 +15,10 @@ int aux_rev(char *str)
 	{
 		return (0);
 	}
-	aux_rev(str + 1);
+	i += aux_rev(str + 1);
 	_putchar(str[i]);
 	i++;
-	return (0);
+	return (i);
 }
 
 /**
@@ -29,14 +29,12 @@ int aux_rev(char *str)
 
 int op_rev(va_list arg)
 {
-	int len = 0;
+	int len;
 	char *str = va_arg(arg, char *);
 
 	if (!str)
 		return (_printf("%r", "(null)"));
-	aux_rev(str);
-	for (len = 0; str[len]; len++)
-		;
+	len = aux_rev(str);
 	return (len);
 }
 
@@ -60,8 +58,7 @@ int op_STR(va_list arg)
 			{
 				_putchar(92);
 				_putchar('x');
-				_printf("0A");
-				j = j + 4;
+				j += hexA(s[i]);
 			}
 			else
 				_putchar(s[i]);

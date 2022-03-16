@@ -31,5 +31,6 @@ int op_STR(va_list arg);
 int op_oct(va_list arg);
 int op_hexa(va_list arg);
 int op_hexA(va_list arg);
+int hexA(int n);
 
 #endif
